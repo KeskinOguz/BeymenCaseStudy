@@ -44,6 +44,8 @@ services:
   beymencasestudy.webapi:
     image: ${DOCKER_REGISTRY-}beymencasestudywebapi
     container_name: beymencs_webapi
+    ports:
+      - "5000:8080"
     build:
       context: .
       dockerfile: BeymenCaseStudy.WebAPI/Dockerfile
@@ -53,6 +55,8 @@ services:
       rabbitmq:
         condition: service_healthy
     environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
       - ConnectionStrings__OrderDb=Host=postgres_db;Database=orderdb;Username=admin;Password=password123
       - ConnectionStrings__StockDb=Host=postgres_db;Database=stockdb;Username=admin;Password=password123
       - ConnectionStrings__NotificationDb=Host=postgres_db;Database=notificationdb;Username=admin;Password=password123
