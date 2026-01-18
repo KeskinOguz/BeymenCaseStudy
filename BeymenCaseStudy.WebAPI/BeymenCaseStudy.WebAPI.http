@@ -1,0 +1,6 @@
+@BeymenCaseStudy.WebAPI_HostAddress = http://localhost:5267
+
+GET {{BeymenCaseStudy.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

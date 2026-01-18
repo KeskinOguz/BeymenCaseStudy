@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="init.sql" />
+  </Folder>
+  <Project Path="BeymenCaseStudy.WebAPI/BeymenCaseStudy.WebAPI.csproj" />
+  <Project Path="CommonModule/CommonModule.csproj" />
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
+  <Project Path="NotificationModule/NotificationModule.csproj" />
+  <Project Path="OrderModule/OrderModule.csproj" />
+  <Project Path="StockModule/StockModule.csproj" />
+</Solution>
